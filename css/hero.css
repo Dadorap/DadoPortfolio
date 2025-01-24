@@ -1,0 +1,24 @@
+.hero {
+  height: 95vh;
+  background-image: url(/images/bgi3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero_div {
+  padding: 2rem;
+}
+.hero_header {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  flex: 1;
+}
+.hero_description {
+  color: rgb(255, 255, 255);
+  font-size: 2.6rem;
+  flex: 1;
+}

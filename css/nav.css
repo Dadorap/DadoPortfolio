@@ -1,0 +1,138 @@
+.header {
+  height: 8rem;
+  max-width: 100%;
+  background: #999;
+}
+.header_logo {
+  color: #fff;
+  font-size: 3.5rem;
+  line-height: 8rem;
+  padding: 0 10rem;
+  font-weight: bold;
+}
+.header nav,
+.header ul {
+  float: right;
+  margin-right: 2rem;
+}
+.header nav,
+.header ul,
+.header li {
+  display: inline-block;
+  line-height: 6rem;
+  margin: 0 5px;
+}
+.header nav,
+.header ul,
+.header li,
+.header a {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-right: 1rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header_btn:hover {
+  background: #777;
+  transition: all 0.5s;
+}
+.header_checkbtn {
+  cursor: pointer;
+  fill: #fff;
+  float: right;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  display: none;
+}
+
+.scroll-down nav {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up nav {
+  filter: drop-shadow(0 -10px 20px #aaaaaa);
+}
+
+#check {
+  display: none;
+}
+
+#cross {
+  display: none;
+}
+
+@media (max-width: 59.5em) {
+  .header_logo {
+    font-size: 3rem;
+    padding-left: 5rem;
+  }
+  .header a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 54em) {
+  .header_checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 30%;
+    height: fit-content;
+    background: #161616;
+    top: 8rem;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+  }
+  .header nav,
+  .header ul,
+  .header li {
+    display: block;
+  }
+  .header nav,
+  .header ul,
+  .header li,
+  .header a {
+    font-size: 1.6rem;
+  }
+  .header_btn:hover,
+  .header_btn:active {
+    background: none;
+    color: #d75a0c;
+  }
+  #check:checked ~ ul {
+    right: 0;
+  }
+  #check:checked ~ #cross {
+    display: block;
+  }
+  #check:checked ~ #menu {
+    display: none;
+  }
+}
+
+@media (max-width: 33.75em) {
+  .header_logo {
+    font-size: 2rem;
+    padding-left: 2.5rem;
+  }
+  .header a {
+    font-size: 1.2rem;
+  }
+  .header_list li {
+    padding: 0;
+    margin: 0;
+    line-height: 3;
+  }
+}
+
+@media (max-width: 21.25em) {
+  .header a {
+    font-size: 1rem;
+  }
+}
