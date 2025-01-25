@@ -10,15 +10,36 @@
 html {
   font-size: 62.5%;
 }
-@media only screen and (max-width: 93.75em) {
-  html {
-    font-size: 60%;
-  }
-}
 
 h1 h2 h3 h4 h5 h6 {
   font-family: "Poppins", sans-serif;
 }
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+}
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+
+@media only screen and (max-width: 750px) {
+  html {
+    font-size: 40%;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 30%;
+  }
 }

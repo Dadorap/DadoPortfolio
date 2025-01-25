@@ -1,16 +1,21 @@
-.hero {
-  height: 95vh;
+.hero_container {
+  height: 100vh;
   background-image: url(/images/bgi3.jpg);
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.hero {
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 5rem;
 }
 
 .hero_div {
-  padding: 2rem;
+  padding: 0 2rem;
 }
 .hero_header {
   color: rgb(255, 255, 255);
@@ -21,4 +26,11 @@
   color: rgb(255, 255, 255);
   font-size: 2.6rem;
   flex: 1;
+}
+
+@media only screen and (max-width: 100rem) {
+  .hero_container {
+      background-image: url(/images/bgi3.jpg);
+  background-size:cover;
+  }
 }
