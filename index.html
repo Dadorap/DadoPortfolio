@@ -4,63 +4,136 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/nav.css" />
-    <link rel="stylesheet" href="/css/hero.css" />
-  </head>
-  <body>
-    <main>
-      <section class="hero_container">
-        <div>
-          <nav class="header">
-            <input type="checkbox" id="check" />
-            <label for="check">
-              <svg id="menu" class="header_checkbtn">
-                <use xlink:href="images/sprite.svg#icon-menu"></use>
-              </svg>
-            </label>
-            <label class="header_logo"> AbdulDev</label>
-            <ul class="header_list">
-              <li>
-                <a href="#project" class="header_btn">Projects</a>
-              </li>
-              <li>
-                <a href="#" class="header_btn">Contact Me</a>
-              </li>
-            </ul>
-          </nav>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/hero.css" />
+  <link rel="stylesheet" href="/css/contact.css">
+  <link rel="stylesheet" href="/css/circle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+  <main>
+    <section class="hero_container">
+      <div>
+        <nav class="header">
+          <input type="checkbox" id="check" />
+          <label for="check">
+            <svg id="menu" class="header_checkbtn">
+              <use xlink:href="images/sprite.svg#icon-menu"></use>
+            </svg>
+          </label>
+          <label class="header_logo"> AbdulDev</label>
+          <ul class="header_list">
+            <li>
+              <a href="#project" class="header_btn">Projects</a>
+            </li>
+            <li>
+              <a href="#" class="header_btn">Contact Me</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="hero">
+        <div class="hero_dox slideInAnimation">
+          <h1 class="hero_header">Hello, I'm Abdulkadir.<br>I'm passionate about<br> crafting modern, <br>responsive
+            websites.</h1>
         </div>
 
-        <div class="hero">
-          <div class="hero_dox">
-            <h1 class="hero_header">
-              Hello, I'm Abdulkadir.
-              <br />
-              I'm passionate about crafting modern, <br />responsive websites.
-            </h1>
-            </div>
-            
-            <div class="hero_box">
-            <p class="hero_description">
-              <br />I'm passionate about crafting meaningful experiences that
-              make a difference. <br />
-              I thrive on challenges and enjoy bringing ideas to life through
-              web development.
-            </p>
-            </div>
+        <div class="hero_box" id="contact-btn">
+          <button class="btn btn-contact hidden" id="contactBtn">CONTACT</button>
+        </div>
 
+      </div>
+      </div>
+    </section>
+
+    <section class="work">
+      <div class="work_container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </section>
+
+    <section class="form">
+      <div class="form_container">
+        <div class="content">
+          <div class="left-side">
+            <div class="address details">
+              <i class="fas fa-map-marker-alt"></i>
+              <div class="topic">Address</div>
+              <div class="text-one">Vasagatan 8</div>
+              <div class="text-two">Härnösand, 871 41</div>
+            </div>
+  
+            <div class="phone details">
+              <i class="fas fa-phone-alt"></i>
+              <div class="topic">Phone</div>
+              <div class="text-one">076-270 22 70</div>
+            </div>
+  
+            <div class="email details">
+              <i class="fas fa-envelope"></i>
+              <div class="topic">Email</div>
+              <div class="text-one">AbdulKadiDev88@hotmail.com</div>
+            </div>
+          </div>
+  
+          <div class="right-side">         
+            <div class="topic-text">Get in Touch</div>
+            <p>Looking forward to your message!<br>I’ll get back to you as soon as possible. </p>
+            <form action="#">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name">
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter your email">
+              </div>
+              <div class="input-box message-box">
+                <textarea></textarea>
+              </div>
+              <div class="button">
+                <input type="button" value="Send">
+              </div>
+            </form>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
+  <div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+  <script src="/js/circle.js" async defer></script>
+  <script src="/js/index.js"></script>i
+</body>
+<footer></footer>
 
-    <script src="/index.js" async defer></script>
-  </body>
-  <footer></footer>
 </html>

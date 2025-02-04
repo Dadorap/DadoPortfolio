@@ -34,7 +34,7 @@
   text-decoration: none;
 }
 .header_btn:hover {
-  background: #777;
+  color: #777;
   transition: all 0.5s;
 }
 .header_checkbtn {

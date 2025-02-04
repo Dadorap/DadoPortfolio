@@ -1,7 +1,7 @@
 .hero_container {
   height: 100vh;
   background-image: url(/images/bgi3.jpg);
-  background-size:cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -17,20 +17,61 @@
 .hero_div {
   padding: 0 2rem;
 }
+
 .hero_header {
   color: rgb(255, 255, 255);
-  font-size: 4rem;
+  font-size: 6rem;
   flex: 1;
 }
+
 .hero_description {
   color: rgb(255, 255, 255);
   font-size: 2.6rem;
   flex: 1;
 }
 
+.btn-contact {
+  color: white;
+  background: var(--primary-gradient);
+  font-size: 3rem;
+  margin-top: 9rem;
+  margin-left: 3rem;
+}
+
+#contactBtn {
+  transform: translateX(50%);
+}
+
+.hidden {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50%);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s;
+}
+
+.slideInAnimation {
+  position: relative;
+  visibility: visible !important;
+  animation: slideIn 2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media only screen and (max-width: 100rem) {
   .hero_container {
-      background-image: url(/images/bgi3.jpg);
-  background-size:cover;
+    background-image: url(/images/bgi3.jpg);
+    background-size: cover;
   }
 }
