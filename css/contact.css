@@ -172,3 +172,20 @@
     text-align: center;
   }
 }
+
+@media (max-width: 320px) {
+  .form_container {
+    padding: 3rem 2rem 4rem 2rem;
+  }
+  .right-side .input-box input,
+  .right-side .input-box textarea {
+    font-size: 1.4rem;
+  }
+  .right-side .button input[type="button"] {
+    font-size: 1.8rem;
+  }
+
+  .content .left-side .details .text-one {
+    font-size: 1.5rem;
+  }
+}
