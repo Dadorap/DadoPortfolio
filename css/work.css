@@ -40,7 +40,7 @@
 .card {
   cursor: pointer;
   width: 45rem;
-  min-height: 45rem;
+  min-height: 50rem;
   background-color: #333;
   border-radius: 10px;
   overflow: hidden;

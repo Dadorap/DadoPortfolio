@@ -19,6 +19,7 @@
 .form_container .content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .form_container .content .left-side {
@@ -26,7 +27,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   margin-top: 1.6rem;
   position: relative;
@@ -35,7 +35,7 @@
 .content .left-side::before {
   content: "";
   position: absolute;
-  height: 70%;
+  height: 100%;
   width: 2px;
   right: -1.5rem;
   top: 50%;
@@ -132,6 +132,22 @@
 .button input[type="button"]:hover {
   outline: 2px solid rgba(5, 5, 5, 0.5);
   filter: brightness(1.2);
+}
+
+.text-one a {
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #5000ff;
+  transition: 1sec all ease;
+}
+
+.text-one a:hover {
+  border: 1px solid #5000ff;
+  transition: 1sec all ease;
 }
 
 @media (max-width: 950px) {
