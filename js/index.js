@@ -15,3 +15,27 @@ document.addEventListener("DOMContentLoaded", function () {
     contactBtnBox.classList.add("slideInAnimation");
   }, 1000);
 });
+
+document.querySelector("#contactBtn").addEventListener("click", function () {
+  document.querySelector("#form").scrollIntoView({ behavior: "smooth" });
+});
+
+document.querySelectorAll(".header_btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const btnText = btn.innerHTML.trim().toLowerCase();
+    console.log(btnText);
+    switch (btnText) {
+      case "about me":
+        document.querySelector(".about").scrollIntoView({ behavior: "smooth" });
+        break;
+      case "projects":
+        document
+          .querySelector(".project")
+          .scrollIntoView({ behavior: "smooth" });
+        break;
+      case "contact me":
+        document.querySelector(".form").scrollIntoView({ behavior: "smooth" });
+        break;
+    }
+  });
+});
