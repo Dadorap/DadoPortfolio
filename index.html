@@ -177,16 +177,16 @@
             <p>Looking forward to your message!<br>I'll get back to you as soon as possible. </p>
             <form action="#">
               <div class="input-box">
-                <input type="text" placeholder="Enter your name">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
               </div>
               <div class="input-box">
-                <input type="text" placeholder="Enter your email">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
               </div>
               <div class="input-box message-box">
                 <textarea></textarea>
               </div>
-              <div class="button">
-                <input type="button" value="Send">
+              <div>
+                <input class="btn btn-contact" id="btn-submit" type="submit" value="Send">
               </div>
             </form>
           </div>
@@ -217,6 +217,7 @@
   <script src="/js/circle.js" async defer></script>
   <script src="/js/index.js"></script>
   <script src="/js/card.js"></script>
+  <script src="/js/form.js"></script>
 </body>
 <footer>
   <p>© 2025 AbdulDev. All rights reserved.</p>

@@ -66,8 +66,8 @@
   transform: rotateY(180deg);
 }
 
-.scale{
-    scale: 2;
+.scale {
+  scale: 2;
 }
 
 .project-card-front,
@@ -177,27 +177,22 @@
   }
 }
 
-@media (max-width: 480px) {
-  .card {
-    width: 30rem;
-    height: 30rem;
-
-    width: 25rem;
-    height: 25rem;
-  }
-}
-
 @media screen and (max-width: 350px) {
   .project .project-container {
     width: 100%;
     margin: 1rem 0;
   }
-  .card {
-    width: 20rem;
-    height: 20rem;
+
+  .project-card-front .upcoming-project {
+    font-size: 2.5rem;
   }
+
   .card-header {
     font-size: 2.2rem;
+  }
+
+  .card {
+    width: 25rem;
   }
 
   .card-description {
@@ -209,12 +204,14 @@
   }
 }
 
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 270px) {
   .card-container-header {
     font-size: 4rem;
   }
+.project-card-front{
+  text-align: center;
+}
   .card {
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
   }
 }

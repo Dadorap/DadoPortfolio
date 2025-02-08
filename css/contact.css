@@ -187,6 +187,11 @@
   .right-side form {
     text-align: center;
   }
+
+  #btn-submit {
+    font-size: 2rem;
+    height: 4rem;
+  }
 }
 
 @media (max-width: 320px) {
