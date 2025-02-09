@@ -26,6 +26,16 @@
 .about-img {
   flex: 1;
   background-image: url(/images/portphoto.png);
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -91,11 +101,11 @@
 }
 
 @media (max-width: 350px) {
-      .about-text p {
+  .about-text p {
     font-size: 1.2rem;
   }
 
-  #skill-svg{
+  #skill-svg {
     margin: 1rem;
   }
   .svg {
