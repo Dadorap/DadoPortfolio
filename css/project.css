@@ -60,14 +60,12 @@
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
+  will-change: transform;
 }
 
-.project-card.flipped {
+.project-card:hover {
   transform: rotateY(180deg);
-}
-
-.scale {
-  scale: 2;
+  box-shadow: none;
 }
 
 .project-card-front,
@@ -76,7 +74,9 @@
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
+  will-change: transform;
 }
+
 .project-card-front {
   background-color: #555;
   display: flex;
@@ -111,11 +111,14 @@
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
+  margin: 5rem 1rem;
 }
 
 .card-description {
   font-size: 1.6rem;
+  line-height: 1.6;
   color: #fff;
+  max-width: 80%;
 }
 
 .visit {
@@ -124,7 +127,6 @@
   color: #fff;
   background: #110834;
   text-decoration: none;
-  border: 2px solid #fff;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: 0.3s;
@@ -135,6 +137,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .svg-box {
@@ -148,7 +152,7 @@
 
 .svg {
   width: 10rem;
-  height: auto;
+  height: 10rem;
 }
 
 @media screen and (max-width: 1300px) {
@@ -208,9 +212,9 @@
   .card-container-header {
     font-size: 4rem;
   }
-.project-card-front{
-  text-align: center;
-}
+  .project-card-front {
+    text-align: center;
+  }
   .card {
     width: 20rem;
   }
