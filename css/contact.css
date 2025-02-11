@@ -117,7 +117,10 @@
   display: inline-block;
   margin-top: 0.8rem;
 }
-
+.btn-contact {
+  font-size: 3rem;
+  text-align: center;
+}
 .text-one a,
 .btn-contact {
   border: none;
