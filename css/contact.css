@@ -113,40 +113,33 @@
   min-height: 12rem;
 }
 
-.right-side .button {
+.right-side {
   display: inline-block;
   margin-top: 0.8rem;
 }
 
-.right-side .button input[type="button"] {
-  cursor: pointer;
-  font-size: 2rem;
+.text-one a,
+.btn-contact {
   border: none;
-  color: #fff;
-  border-radius: 6px;
-  padding: 1rem 2rem;
-  background: var(--primary-gradient);
-  transition: all 0, 3 ease;
+  box-shadow: 4px 4px 10px #000, -4px -4px 10px var(--clr-dark-heavy);
 }
 
-.button input[type="button"]:hover {
-  outline: 2px solid rgba(5, 5, 5, 0.5);
-  filter: brightness(1.2);
+.text-one a:hover,
+.btn-contact:hover {
+  box-shadow: 4px 4px 10px #0000008e, -4px -4px 10px var(--clr-dark-heavy),
+    inset 4px 4px 10px #0000008e, inset -4px -4px 10px var(--clr-dark-heavy);
 }
 
 .text-one a {
+  display: inline-block;
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
   padding: 5px 10px;
   border-radius: 5px;
   color: #fff;
+  margin-top: 1rem;
   background-color: #5000ff;
-  transition: 1sec all ease;
-}
-
-.text-one a:hover {
-  border: 1px solid #5000ff;
   transition: 1sec all ease;
 }
 

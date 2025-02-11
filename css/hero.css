@@ -31,8 +31,6 @@
 }
 
 .btn-contact {
-  color: white;
-  background: var(--primary-gradient);
   font-size: 3rem;
   height: 6rem;
   text-align: center;
@@ -46,7 +44,14 @@
 }
 
 #contactBtn {
-  transform: translateX(50%);
+  box-shadow: 4px 4px 10px #00000099, -4px -4px 10px #353535,
+    inset 4px 4px 10px #00000099, inset -4px -4px 10px #353535;
+  transform: translateX(80%);
+}
+
+#contactBtn:hover {
+  color: bisque;
+  border: 3px solid bisque;
 }
 
 .hidden {

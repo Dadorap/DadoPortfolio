@@ -26,7 +26,7 @@
   color: #fff;
 }
 
-.project-container .card-container {
+.project-container .cards-container {
   display: flex;
   flex-direction: row;
   align-self: center;
@@ -37,8 +37,11 @@
   gap: 2rem;
 }
 
-.card {
-  cursor: pointer;
+.card-container {
+  perspective: 100rem;
+
+  
+  position: relative;
   width: 45rem;
   min-height: 50rem;
   background-color: #333;
@@ -50,7 +53,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   perspective: 1000px;
 }
 
@@ -59,13 +61,11 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.5s ease;
-  will-change: transform;
+  transition: transform 0.6s ease-in-out;
 }
 
 .project-card:hover {
   transform: rotateY(180deg);
-  box-shadow: none;
 }
 
 .project-card-front,
@@ -74,7 +74,6 @@
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
-  will-change: transform;
 }
 
 .project-card-front {
@@ -83,17 +82,6 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-
-.upcoming-project {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-}
-
-.coming-soon {
-  font-size: 2rem;
-  color: #fff;
 }
 
 .project-card-back {
@@ -105,6 +93,17 @@
   gap: 1rem;
   background-color: #555;
   transform: rotateY(180deg);
+}
+
+.upcoming-project {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.coming-soon {
+  font-size: 2rem;
+  color: #fff;
 }
 
 .card-header {
@@ -156,14 +155,14 @@
 }
 
 @media screen and (max-width: 1300px) {
-  .card {
+  .card-container {
     width: 40rem;
     height: 40rem;
   }
 }
 
 @media screen and (max-width: 1080px) {
-  .card {
+  .card-container {
     width: 30rem;
     height: 30rem;
   }
@@ -175,7 +174,7 @@
     margin: 1rem 0;
   }
 
-  .card {
+  .card-container {
     width: 30rem;
     height: 30rem;
   }
@@ -195,7 +194,7 @@
     font-size: 2.2rem;
   }
 
-  .card {
+  .card-container {
     width: 25rem;
   }
 
@@ -215,7 +214,7 @@
   .project-card-front {
     text-align: center;
   }
-  .card {
+  .card-container {
     width: 20rem;
   }
 }
