@@ -2,6 +2,9 @@ document.getElementById("name").addEventListener("input", function () {
   this.value = this.value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, "");
 });
 
-document.getElementById("myForm").addEventListener("submit", function (event) {
-  event.preventDefault(); 
-});
+
+
+function redirectPopup() {
+  console.log("Button clicked (inline script)");
+  window.location.href = "http://127.0.0.1:5500/";
+}

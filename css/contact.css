@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .form_container {
@@ -128,9 +129,10 @@
 }
 
 .text-one a:hover,
-.btn-contact:hover {
-  box-shadow: 4px 4px 10px #0000008e, -4px -4px 10px var(--clr-dark-heavy),
-    inset 4px 4px 10px #0000008e, inset -4px -4px 10px var(--clr-dark-heavy);
+.btn-contact:hover,
+.btn-popup:hover {
+  box-shadow: 4px 4px 10px #0000008e, -4px -4px 10px #546e7a,
+    inset 4px 4px 10px #0000008e, inset -4px -4px 10px #546e7a;
 }
 
 .text-one a {
@@ -140,10 +142,58 @@
   transition: 0.3s;
   padding: 5px 10px;
   border-radius: 5px;
-  color: #fff;
+  color: var(--clr-med);
   margin-top: 1rem;
   background-color: #5000ff;
   transition: 1sec all ease;
+}
+
+.popup {
+  font-family: "Poppins", sans-serif;
+  width: 40rem;
+  color: #333;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 2rem 3rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-popup {
+  cursor: pointer;
+  color: #fff !important;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  outline: none;
+  box-shadow: 4px 4px 10px #000, -4px -4px 10px #546e7a;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  color: var(--clr-med);
+  background-color: #5000ff;
+  transition: 1sec all ease;
+  margin-top: 5rem;
+}
+
+.popup img {
+  width: 15rem;
+  margin-top: -7rem;
+}
+
+.popup h2 {
+  font-size: 3.8rem;
+  font-weight: 500;
+  margin: 3rem 0 1rem;
+}
+
+.popup p {
+  font-size: 2rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 950px) {
