@@ -66,13 +66,7 @@
 }
 
 @media (max-width: 59.5em) {
-  .header_logo {
-    font-size: 3rem;
-    padding-left: 5rem;
-  }
-  .header a {
-    font-size: 1.4rem;
-  }
+
 }
 
 @media (max-width: 54em) {
@@ -118,7 +112,6 @@
 @media (max-width: 33.75em) {
   .header_logo {
     font-size: 2rem;
-    padding-left: 1rem;
   }
   .header a {
     font-size: 1.2rem;
