@@ -41,7 +41,7 @@
   right: -1.5rem;
   top: 50%;
   transform: translateY(-50%);
-  background: var(--primary-gradient);
+  background: var(--clr-primary);
 }
 
 .content .left-side .details .text-one,
@@ -57,7 +57,7 @@
 
 .content .left-side .details i {
   font-size: 4rem;
-  color: rgb(80, 0, 255);
+  color: var(--clr-primary);
   margin-bottom: 1rem;
 }
 
@@ -75,7 +75,7 @@
 .content .right-side .topic-text {
   font-size: 4rem;
   font-weight: 500;
-  color: rgb(80, 0, 255);
+  color: var(--clr-primary);
 }
 
 .right-side .input-box {

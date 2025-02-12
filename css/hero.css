@@ -21,6 +21,7 @@
 .hero_header {
   color: rgb(255, 255, 255);
   font-size: 6rem;
+  line-height: 1.6;
   flex: 1;
 }
 
@@ -42,7 +43,6 @@
   font-size: 3rem;
   box-shadow: 4px 4px 10px #00000099, -4px -4px 10px #353535,
     inset 4px 4px 10px #00000099, inset -4px -4px 10px #353535;
-  transform: translateX(80%);
 }
 
 #contactBtn:hover {
