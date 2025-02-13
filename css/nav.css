@@ -52,8 +52,6 @@ nav .header {
   display: none;
 }
 
-.header_list {
-}
 
 .scroll-down nav {
   transform: translate3d(0, -100%, 0);
