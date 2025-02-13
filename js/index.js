@@ -23,7 +23,6 @@ document.querySelector("#contactBtn").addEventListener("click", function () {
 document.querySelectorAll(".header_btn").forEach((btn) => {
   btn.addEventListener("click", function () {
     const btnText = btn.innerHTML.trim().toLowerCase();
-    console.log(btnText);
     switch (btnText) {
       case "about me":
         document.querySelector(".about").scrollIntoView({ behavior: "smooth" });
