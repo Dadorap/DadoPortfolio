@@ -22,11 +22,18 @@ background-color: #1a1a2e;
   border-radius: 10px;
 }
 
+.divider{
+  width: 80%;
+  height: 0.5rem;
+  background-color: #ffc400;
+}
+
 .card-container-header {
   font-size: 6rem;
   font-weight: 700;
   color: #fff;
 }
+
 
 .cards-container {
   width: 100%;
