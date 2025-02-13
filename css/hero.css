@@ -46,8 +46,8 @@
 }
 
 #contactBtn:hover {
-  color: bisque;
-  border: 3px solid bisque;
+  color: #ffc400;
+  border: 3px solid #ffc400;
 }
 
 .hidden {

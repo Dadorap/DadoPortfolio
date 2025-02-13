@@ -64,6 +64,7 @@
 .content .left-side .details .topic {
   font-size: 2.6rem;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .form_container .content .right-side {
@@ -118,37 +119,32 @@
   display: inline-block;
   margin-top: 0.8rem;
 }
+
 .btn-contact {
   font-size: 3rem;
-  text-align: center;
-}
-.text-one a,
-.btn-contact {
-  border: none;
-  box-shadow: 4px 4px 10px #000, -4px -4px 10px var(--clr-dark-heavy);
+  box-shadow: 4px 4px 10px #00000099, -4px -4px 10px #353535,
+    inset 4px 4px 10px #00000099, inset -4px -4px 10px #353535;
 }
 
 .text-one a:hover,
 .btn-contact:hover,
 .btn-popup:hover {
-  box-shadow: 4px 4px 10px #0000008e, -4px -4px 10px #546e7a,
-    inset 4px 4px 10px #0000008e, inset -4px -4px 10px #546e7a;
+  color: #ffc400;
+  border: 3px solid #ffc400;
 }
 
 .text-one a {
-  display: inline-block;
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
   padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--clr-med);
-  margin-top: 1rem;
+  border: 3px solid transparent;
+  border-radius: 3rem;
+  color: var(--clr-med);;
   background-color: #5000ff;
-  transition: 1sec all ease;
+  box-shadow: 4px 4px 10px #00000099, -4px -4px 10px #353535,
+    inset 4px 4px 10px #00000099, inset -4px -4px 10px #353535;
 }
-
-
 
 @media (max-width: 950px) {
   .form_container {
