@@ -25,6 +25,10 @@
   flex: 1;
 }
 
+.gold{
+  color: var(--clr-gold);
+}
+
 .hero_description {
   color: rgb(255, 255, 255);
   font-size: 2.6rem;

@@ -1,7 +1,7 @@
 .project {
   min-height: 100vh;
   max-width: 100%;
-background-color: #1a1a2e;
+  background-color: #1a1a2e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,18 +22,16 @@ background-color: #1a1a2e;
   border-radius: 10px;
 }
 
-.divider{
+.divider {
   width: 80%;
   height: 0.5rem;
-  background-color: #ffc400;
+  background-color: var(--clr-gold);
 }
 
 .card-container-header {
   font-size: 6rem;
   font-weight: 700;
-  color: #fff;
 }
-
 
 .cards-container {
   width: 100%;
@@ -48,7 +46,7 @@ background-color: #1a1a2e;
   gap: 2rem;
 }
 
-.upcoming-project{
+.upcoming-project {
   z-index: 3;
 }
 .upcoming-project-header {
@@ -98,7 +96,7 @@ background-color: #1a1a2e;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: #ffc400;
+  background: var(--clr-gold);
   z-index: -1;
 }
 
@@ -109,13 +107,13 @@ background-color: #1a1a2e;
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: #ffc400;
+  background: var(--clr-gold);
   z-index: -2;
   filter: blur(20px);
 }
 .card-container::before,
 .card-container::after {
-  background: linear-gradient(235deg, #ffc400, #0e0d0d, #ffc400);
+  background: linear-gradient(235deg, var(--clr-gold), #0e0d0d, var(--clr-gold));
   border-radius: 5px;
 }
 
@@ -140,6 +138,7 @@ background-color: #1a1a2e;
   font-size: 3rem;
   font-weight: 700;
   margin: 1rem 0;
+  color: #000000;
 }
 .card-descriptions {
   font-size: 2rem;
@@ -155,7 +154,7 @@ background-color: #1a1a2e;
 
 .visit {
   display: inline-block;
-  font-size: 1.4rem;
+  font-size: 2rem;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -172,19 +171,15 @@ background-color: #1a1a2e;
   }
 }
 
-
-
 @media screen and (max-width: 825px) {
   .project .project-container {
     width: 90%;
     margin: 1rem 0;
   }
-
 }
 
 @media (max-width: 550px) {
-
-    .card-container {
+  .card-container {
     width: 30rem;
   }
   .card-headers {
