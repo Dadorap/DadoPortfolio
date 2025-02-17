@@ -1,7 +1,7 @@
 .form {
   background-color: #1a1a2e;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 80vh;
   max-width: 100%;
   display: flex;
   align-items: center;
@@ -48,6 +48,10 @@
 .content .left-side .details .text-two {
   font-size: 1.7rem;
   color: #333;
+}
+
+.hidden{
+  display: none;
 }
 
 .content .left-side .details {
