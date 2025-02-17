@@ -4,7 +4,7 @@ const infoDiv = document.querySelector(".weather-info");
 
 async function getWeather() {
   const apiUrl =
-    "https://api.open-meteo.com/v1/forecast?latitude=62.6323&longitude=17.9370&hourly=temperature_2m,cloudcover,precipitation_probability&timezone=Europe/Stockholm";
+    "https://api.open-meteo.com/v1/forecast?latitude=62.6323&longitude=17.9370&hourly=temperature_2m,precipitation_probability,cloudcover,snowfall&timezone=Europe/Stockholm";
 
   try {
     const resp = await fetch(apiUrl);
@@ -21,6 +21,7 @@ async function displayWeather() {
   const currentTemperature = data.hourly.temperature_2m[0];
   const currentCloudCover = data.hourly.cloudcover[0];
   const rain = data.hourly.precipitation_probability[0];
+  const currentSnowfall = data.hourly.snowfall[0];
 
   const weatherConditions = [
     { name: "Sunny", condition: currentCloudCover < 20 && rain < 10 },
@@ -32,6 +33,10 @@ async function displayWeather() {
     { name: "Light Rain", condition: rain >= 10 && rain < 30 },
     { name: "Rainy", condition: rain >= 30 && rain < 60 },
     { name: "Heavy Rain", condition: rain >= 60 },
+    {
+      name: "Snowing",
+      condition: currentSnowfall >= 5 && currentTemperature <= 2,
+    },
   ];
 
   const currentWeather = weatherConditions.find((weather) => weather.condition);
@@ -55,6 +60,9 @@ async function displayWeather() {
       break;
     case "Heavy Rain":
       imgDiv.innerHTML = '<img src="/images/weatherImages/rain.png" alt="" />';
+      break;
+    case "Snowing":
+      imgDiv.innerHTML = '<img src="/images/weatherImages/snow.png" alt="" />';
       break;
     default:
       break;
