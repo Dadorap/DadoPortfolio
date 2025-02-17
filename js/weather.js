@@ -4,7 +4,7 @@ const infoDiv = document.querySelector(".weather-info");
 
 async function getWeather() {
   const apiUrl =
-    "https://api.open-meteo.com/v1/forecast?latitude=62.6323&longitude=17.9370&hourly=temperature_2m,precipitation_probability,cloudcover,snowfall&timezone=Europe/Stockholm";
+    "https://api.open-meteo.com/v1/forecast?latitude=62.6323&longitude=17.9370&hourly=temperature_2m,precipitation_probability,cloudcover,snowfall&daily=sunset&timezone=Europe/Stockholm";
 
   try {
     const resp = await fetch(apiUrl);
@@ -15,16 +15,33 @@ async function getWeather() {
   }
 }
 
+function getCurrentTimeFormatted() {
+  const now = new Date();
+
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const hour = String(now.getHours()).padStart(2, "0");
+
+  return `${year}-${month}-${day}T${hour}:00`;
+}
+
 async function displayWeather() {
   const data = await getWeather();
+  const timeIndex = data.hourly.time.findIndex(
+    (time) => time == getCurrentTimeFormatted()
+  );
 
-  const currentTemperature = data.hourly.temperature_2m[0];
-  const currentCloudCover = data.hourly.cloudcover[0];
-  const rain = data.hourly.precipitation_probability[0];
-  const currentSnowfall = data.hourly.snowfall[0];
+  const sunsetTime = data.daily.sunset[0];
+  const currentTemperature = data.hourly.temperature_2m[timeIndex];
+  const currentCloudCover = data.hourly.cloudcover[timeIndex];
+  const rain = data.hourly.precipitation_probability[timeIndex];
+  const currentSnowfall = data.hourly.snowfall[timeIndex];
+
+  console.log(sunsetTime < getCurrentTimeFormatted());
 
   const weatherConditions = [
-    { name: "Sunny", condition: currentCloudCover < 20 && rain < 10 },
+    { name: "Clear", condition: currentCloudCover < 20 && rain < 10 },
     {
       name: "Cloudy",
       condition: currentCloudCover >= 20 && currentCloudCover < 60 && rain < 10,
@@ -41,31 +58,72 @@ async function displayWeather() {
 
   const currentWeather = weatherConditions.find((weather) => weather.condition);
 
-  switch (currentWeather.name) {
-    case "Sunny":
-      imgDiv.innerHTML = '<img src="/images/weatherImages/sunny.png" alt="" />';
-      break;
-    case "Cloudy":
-      imgDiv.innerHTML =
-        '<img src="/images/weatherImages/cloudy.png" alt="" />';
-      break;
-    case "Cloud":
-      imgDiv.innerHTML = '<img src="/images/weatherImages/cloud.png" alt="" />';
-      break;
-    case "Light Rain":
-      imgDiv.innerHTML = '<img src="/images/weatherImages/rainy.png" alt="" />';
-      break;
-    case "Rainy":
-      imgDiv.innerHTML = '<img src="/images/weatherImages/rainy.png" alt="" />';
-      break;
-    case "Heavy Rain":
-      imgDiv.innerHTML = '<img src="/images/weatherImages/rain.png" alt="" />';
-      break;
-    case "Snowing":
-      imgDiv.innerHTML = '<img src="/images/weatherImages/snow.png" alt="" />';
-      break;
-    default:
-      break;
+  if (sunsetTime > getCurrentTimeFormatted()) {
+    switch (currentWeather.name) {
+      case "Clear":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/sunny.png" alt="" />';
+        break;
+      case "Cloudy":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/cloudy.png" alt="" />';
+        break;
+      case "Cloud":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/cloud.png" alt="" />';
+        break;
+      case "Light Rain":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/rainy.png" alt="" />';
+        break;
+      case "Rainy":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/rainy.png" alt="" />';
+        break;
+      case "Heavy Rain":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/rain.png" alt="" />';
+        break;
+      case "Snowing":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/snow.png" alt="" />';
+        break;
+      default:
+        break;
+    }
+  } else {
+    switch (currentWeather.name) {
+      case "Clear":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/night.png" alt="" />';
+        break;
+      case "Cloudy":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/cloudy-night.png" alt="" />';
+        break;
+      case "Cloud":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/cloud.png" alt="" />';
+        break;
+      case "Light Rain":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/rainy-night.png" alt="" />';
+        break;
+      case "Rainy":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/rainy-night.png" alt="" />';
+        break;
+      case "Heavy Rain":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/rain.png" alt="" />';
+        break;
+      case "Snowing":
+        imgDiv.innerHTML =
+          '<img src="/images/weatherImages/snowy-night.png" alt="" />';
+        break;
+      default:
+        break;
+    }
   }
 
   infoDiv.innerHTML = `
@@ -76,3 +134,5 @@ async function displayWeather() {
 }
 
 displayWeather();
+
+
