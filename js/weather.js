@@ -73,8 +73,6 @@ async function displayWeather() {
   Cloud cover: ${currentCloudCover}% &nbsp;
   Rain probability: ${rain}%
 `;
-
-  console.log(`Current temperature in Härnösand: °C`);
 }
 
 displayWeather();
