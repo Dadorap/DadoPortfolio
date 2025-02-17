@@ -1,8 +1,6 @@
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: antiquewhite;
-}
+
 .popup {
+  font-family: "Poppins", sans-serif;
   height: auto;
   width: 40rem;
   color: #353535;
