@@ -4,8 +4,7 @@ const infoDiv = document.querySelector(".weather-info");
 
 async function getWeather() {
   const apiUrl =
-    "https://api.open-meteo.com/v1/forecast?latitude=62.6323&longitude=17.9370&hourly=temperature_2m,precipitation_probability,cloudcover,snowfall&daily=sunset&timezone=Europe/Stockholm";
-
+    "https://api.open-meteo.com/v1/forecast?latitude=62.6323&longitude=17.9370&hourly=temperature_2m,precipitation_probability,cloudcover,snowfall&daily=sunset,sunrise&timezone=Europe/Stockholm";
   try {
     const resp = await fetch(apiUrl);
     const data = await resp.json();
@@ -33,12 +32,13 @@ async function displayWeather() {
   );
 
   const sunsetTime = data.daily.sunset[0];
+  const sunriseTime = data.daily.sunrise[0];
   const currentTemperature = data.hourly.temperature_2m[timeIndex];
   const currentCloudCover = data.hourly.cloudcover[timeIndex];
   const rain = data.hourly.precipitation_probability[timeIndex];
   const currentSnowfall = data.hourly.snowfall[timeIndex];
 
-  console.log(sunsetTime < getCurrentTimeFormatted());
+  console.log(sunriseTime);
 
   const weatherConditions = [
     { name: "Clear", condition: currentCloudCover < 20 && rain < 10 },
@@ -58,7 +58,10 @@ async function displayWeather() {
 
   const currentWeather = weatherConditions.find((weather) => weather.condition);
 
-  if (sunsetTime > getCurrentTimeFormatted()) {
+  if (
+    sunsetTime > getCurrentTimeFormatted() ||
+    sunriseTime > getCurrentTimeFormatted()
+  ) {
     switch (currentWeather.name) {
       case "Clear":
         imgDiv.innerHTML =
@@ -134,5 +137,3 @@ async function displayWeather() {
 }
 
 displayWeather();
-
-
