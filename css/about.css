@@ -1,6 +1,6 @@
 .about {
-  background-color: #1a1a2e;
-  color: #ffffff;
+  background-color: var(--clr-dark-heavy);
+  color: var(--clr-light);
   padding: 5rem 0;
 }
 

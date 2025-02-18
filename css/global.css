@@ -6,7 +6,7 @@
   --clr-light: #ffffff;
   --clr-med: #d7dfe2;
   --clr-dark: #90a4ae;
-  --clr-dark-heavy: #546e7a;
+  --clr-dark-heavy: #1a1a2e;
   --clr-gold: #fcb330;
 }
 
@@ -38,7 +38,7 @@ h6 {
 }
 main {
   margin: 0 auto;
-  background-color: #1a1a2e;
+  background-color: var(--clr-dark-heavy);
 }
 
 .btn {
@@ -57,8 +57,8 @@ main {
 }
 
 .btn:hover {
-  color: #ffc400;
-  border: 3px solid #ffc400;
+  color: var(--clr-gold);
+  border: 3px solid var(--clr-gold);
 }
 
 /* /////////// */

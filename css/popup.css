@@ -25,7 +25,7 @@
   padding: 1rem 2rem;
   border: 3px solid transparent;
   border-radius: 3rem;
-  background-color: #5000ff;
+  background-color: var(--clr-primary);
   box-shadow: 4px 4px 10px #00000099, -4px -4px 10px #353535,
     inset 4px 4px 10px #00000099, inset -4px -4px 10px #353535;
   margin-top: 5rem;
@@ -37,7 +37,7 @@
 }
 
 .popup h2 {
-  color: #5000ff;
+  color: var(--clr-primary);
   font-size: 3.8rem;
   font-weight: 500;
   margin: 3rem 0 1rem;

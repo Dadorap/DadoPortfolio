@@ -4,7 +4,7 @@
 
 .weather-box {
   height: 10rem;
-  color: #fff;
+  color: var(--clr-light);
   background-color: transparent;
   margin-top: -10.5rem;
   position: absolute;

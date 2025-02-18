@@ -1,5 +1,5 @@
 .form {
-  background-color: #1a1a2e;
+  background-color: var(--clr-dark-heavy);
   min-height: 100vh;
   max-width: 100%;
   display: flex;
@@ -166,8 +166,8 @@
 .text-one a:hover,
 .btn-contact:hover,
 .btn-popup:hover {
-  color: #ffc400;
-  border: 3px solid #ffc400;
+  color: var(--clr-gold);
+  border: 3px solid var(--clr-gold);
 }
 
 .text-one a {
@@ -264,7 +264,7 @@
     font-size: 1.5rem;
   }
 
-    .testimonial-btn {
-      font-size: 0.8rem;
+  .testimonial-btn {
+    font-size: 0.8rem;
   }
 }
