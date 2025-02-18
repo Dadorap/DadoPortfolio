@@ -9,7 +9,7 @@
   margin-top: -10.5rem;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -20;
 }
 
 .weather-img img {
@@ -22,10 +22,7 @@
 }
 
 @media (max-width: 300px) {
-  .weather-box {
-    right:unset;
+  .weather-info {
+    font-size: 1.2rem;
   }
-.weather-info {
-  font-size: 1.2rem;
-}
 }
