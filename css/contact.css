@@ -37,7 +37,7 @@
 
 .testimonial-img {
   display: inline-block;
-  max-width: 80%;
+  max-width: 70%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
@@ -47,7 +47,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-left: 7.5rem;
+  margin-left: 20rem;
+  margin-bottom: 3rem;
+  background-color: #0e0d0d;
+  color: var(--clr-light);
 }
 
 .form_container .content {
@@ -161,11 +164,12 @@
 
 .btn-contact {
   font-size: 3rem;
+  background-color: #0e0d0d;
+  color: var(--clr-light);
+  border: 3px solid #0e0d0d;
 }
 
-.text-one a:hover,
-.btn-contact:hover,
-.btn-popup:hover {
+.text-one a:hover {
   color: var(--clr-gold);
   border: 3px solid var(--clr-gold);
 }
@@ -178,7 +182,6 @@
   border: 3px solid transparent;
   border-radius: 3rem;
   color: var(--clr-med);
-  background-color: #5000ff;
   box-shadow: 4px 4px 10px #00000099, -4px -4px 10px #353535,
     inset 4px 4px 10px #00000099, inset -4px -4px 10px #353535;
 }
