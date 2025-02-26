@@ -71,3 +71,17 @@ main {
   background-color: transparent;
   color: transparent;
 }
+
+.svg-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.svg {
+  width: 10rem;
+  height: 10rem;
+}
