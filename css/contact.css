@@ -133,9 +133,9 @@
 
 .btn-contact {
   font-size: 3rem;
-  background-color: #0e0d0d;
-  color: var(--clr-light);
-  border: 3px solid #0e0d0d;
+  background-color:var(--clr-light) ;
+  color: var(--clr-black);
+  border: 3px solid var(--clr-light);
 }
 
 .text-one a:hover {
@@ -146,11 +146,13 @@
 .text-one a {
   text-decoration: none;
   font-size: 16px;
+  font-weight: bold;
   transition: 0.3s;
   padding: 5px 10px;
-  border: 3px solid transparent;
   border-radius: 3rem;
-  color: var(--clr-med);
+   background-color:var(--clr-light) ;
+  color: var(--clr-black);
+  border: 3px solid var(--clr-light);
   box-shadow: 4px 4px 10px #00000099, -4px -4px 10px #353535,
     inset 4px 4px 10px #00000099, inset -4px -4px 10px #353535;
 }

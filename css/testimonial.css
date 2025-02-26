@@ -1,4 +1,5 @@
 .testimonial-container {
+  min-height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,13 +23,16 @@
 }
 
 .testimonial-btn {
+  font-weight: bold;
+  font-size: 2rem;
   position: absolute;
   bottom: 0;
   left: 0;
   margin-left: 20rem;
   margin-bottom: 3rem;
-  background-color: var(--clr-black);
-  color: var(--clr-light);
+  background-color: var(--clr-light);
+  color: var(--clr-black);
+  border: 3px solid var(--clr-light);
 }
 
 @media (max-width: 560px) {
